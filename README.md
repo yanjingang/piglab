@@ -2,7 +2,7 @@
 小猪实验室
 
 ## 目录
-machinelearning  机器学习实验(注：此目录下项目已逐渐分拆为独立项目)
+machinelearning  机器学习实验(此目录已分拆为独立项目)
 
 miniprogram      实验演示客户端
 
