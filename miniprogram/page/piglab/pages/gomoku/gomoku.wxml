@@ -1,0 +1,15 @@
+<import src="../../../common/head.wxml" />
+<import src="../../../common/foot.wxml" />
+
+<view class="container">
+  <template is="head" data="{{title: '与强化学习的五子棋AI对战'}}"/>
+
+  <view class="page-body">
+    <view class="page-body-wrapper">
+      <canvas canvas-id="board" class="board"  bindtap="onBoardClick"></canvas>
+    </view>
+  </view>
+
+</view>
+
+

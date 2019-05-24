@@ -1,0 +1,6 @@
+.board {
+  width: 306px;
+  height: 306px;
+  background-color: rgba(248, 227, 201, 1);
+  /*background-color: #fff;*/
+}

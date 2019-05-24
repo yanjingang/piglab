@@ -1,0 +1,34 @@
+<import src="../../../common/head.wxml" />
+<import src="../../../common/foot.wxml" />
+
+<view class="container">
+  <view class="page-body">
+    <view class="page-section">
+      <view class="page-body-info">
+
+        <block wx:if="{{url}}">
+          <image src="{{url}}" class="image" mode="aspectFit"></image>
+        </block>
+
+        <block wx:else>
+          <view class="image-plus image-plus-nb" bindtap="chooseImage">
+            <view class="image-plus-horizontal"></view>
+            <view class="image-plus-vertical"></view>
+          </view>
+          <view class="image-plus-text">拍照或选择图片</view>
+        </block>
+
+      </view>
+    </view>
+
+    <view class="page-section">
+      <view class="page-section-title">
+        <text>url：{{url}}\n</text>
+        <text>识别结果：{{res.label}}\n</text>
+        <text>识别结果名称：{{res.label_name}}\n</text>
+        <text>概率：{{res.weight}}\n</text>
+        
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,25 @@
+{
+  "name": "小猪实验室",
+  "version": "1.0.1",
+  "description": "小猪实验室",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wechat-miniprogram/miniprogram-demo.git"
+  },
+  "author": "yanjingang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wechat-miniprogram/miniprogram-demo/issues"
+  },
+  "homepage": "https://github.com/wechat-miniprogram/miniprogram-demo#readme",
+  "devDependencies": {
+    "eslint": "^5.5.0",
+    "eslint-config-airbnb-base": "13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^4.0.0"
+  }
+}
