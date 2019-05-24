@@ -1,5 +1,11 @@
 const requestUrl = require('../../../../config').requestUrl
 Page({
+  onShareAppMessage() {
+    return {
+      title: '五子棋AI-小猪实验室',
+      path: 'page/piglab/pages/gomoku/gomoku'
+    }
+  },
   onReady() {
     this.canvas_width = 306; //画布宽度
     this.piece_width = 5; //棋子半径

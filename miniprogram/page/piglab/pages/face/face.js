@@ -3,6 +3,12 @@ const requestUrl = require('../../../../config').requestUrl
 
 var app = getApp();
 Page({
+  onShareAppMessage() {
+    return {
+      title: '人脸识别-小猪实验室',
+      path: 'page/piglab/pages/face/face'
+    }
+  },
   data: {
     camera_position: 'back',   //默认后置
     camera_position_name: '前置', //操作按钮

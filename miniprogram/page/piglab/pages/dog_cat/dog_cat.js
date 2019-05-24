@@ -1,6 +1,12 @@
 const uploadFileUrl = require('../../../../config').uploadFileUrl
 
 Page({
+  onShareAppMessage() {
+    return {
+      title: '猫狗识别-小猪实验室',
+      path: 'page/piglab/pages/digit/digit'
+    }
+  },
   data: {
     url:'',
     requrl:'',

@@ -1,6 +1,12 @@
 const uploadFileUrl = require('../../../../config').uploadFileUrl
 
 Page({
+  onShareAppMessage() {
+    return {
+      title: '图片分类-小猪实验室',
+      path: 'page/piglab/pages/chess/chess'
+    }
+  },
   chooseImage() {
     const self = this
 

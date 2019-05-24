@@ -48,7 +48,7 @@ Page({
           }*/
         ]
       }
-      /*,
+      ,
       {
         id: 'tools',
         name: '小工具',
@@ -56,10 +56,10 @@ Page({
         pages: [
           {
             zh: '成语接龙',
-            url: 'digit/digit'
+            url: 'chengyu/chengyu'
           }
         ]
-      }*/
+      }
     ],
     isSetTabBarPage: false,
   },

@@ -3,7 +3,7 @@ const uploadFileUrl = require('../../../../config').uploadFileUrl
 Page({
   onShareAppMessage() {
     return {
-      title: '手写数字识别',
+      title: '手写数字识别-小猪实验室',
       path: 'page/piglab/pages/digit/digit'
     }
   },

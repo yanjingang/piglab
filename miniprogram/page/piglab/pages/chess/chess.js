@@ -1,5 +1,11 @@
 const requestUrl = require('../../../../config').requestUrl
 Page({
+  onShareAppMessage() {
+    return {
+      title: '国际象棋AI-小猪实验室',
+      path: 'page/piglab/pages/chess/chess'
+    }
+  },
   data: { //会被api返回值覆盖，不要随便添加
     human_player_select: ['执白', '执黑'],
     human_player_id: 0,
