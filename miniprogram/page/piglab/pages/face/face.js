@@ -119,7 +119,7 @@ Page({
                 canvasId: 'canvas',
                 actions: ctx.getActions()
               })
-              return v  
+              return 
             }
             /*wx.showToast({
               title: '上传成功',
