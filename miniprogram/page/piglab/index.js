@@ -51,7 +51,7 @@ Page({
       ,
       {
         id: 'tools',
-        name: '小工具',
+        name: '工具',
         open: true,
         pages: [
           {

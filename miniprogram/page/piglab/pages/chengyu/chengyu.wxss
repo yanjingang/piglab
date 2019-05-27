@@ -3,3 +3,8 @@
 .page-section{
   margin-bottom: 20rpx;
 }
+.cy-list{
+  margin-top: -20rpx;
+  color: #656565;
+  background: #ffffff;
+}

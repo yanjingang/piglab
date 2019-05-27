@@ -1,0 +1,33 @@
+<view class="index cy-title">
+  <view class="index-hd">
+    <view class="index-desc cy-name">{{name}}</view>
+    <view class="index-desc cy-py">{{py}}</view>
+  </view>
+</view>
+<view>
+</view>
+<view class="container cy-info">
+  <view class="page-body">
+    <view class="item border-bottom" >
+        <text class="item-desc">成语解释</text>
+    </view>
+    <view class="page-section">
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_switch">
+          <view class="weui-cell__bd">{{info}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="item border-bottom" >
+        <text class="item-desc">接龙成语</text>
+    </view>
+    <view class="page-section">
+      <view class="weui-cells weui-cells_after-title">
+        <view wx:for-items="{{next}}" wx:for-item="item" wx:key="index"  class="weui-cell weui-cell_switch">
+          <view class="weui-cell__bd"  data-id="{{item.id}}" data-name="{{item.name}}" data-py="{{item.py}}" data-info="{{item.info}}" bindtap="onInfo">{{item.name}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>

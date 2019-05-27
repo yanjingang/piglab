@@ -8,6 +8,7 @@
     "page/piglab/pages/chess/chess",
     "page/piglab/pages/face/face",
     "page/piglab/pages/chengyu/chengyu",
+    "page/piglab/pages/chengyu/info",
     "page/component/index",
     "page/component/pages/view/view",
     "page/component/pages/scroll-view/scroll-view",
