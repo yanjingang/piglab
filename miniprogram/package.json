@@ -1,6 +1,6 @@
 {
   "name": "小猪实验室",
-  "version": "1.6.2",
+  "version": "1.6.5",
   "description": "小猪实验室",
   "scripts": {
     "lint": "eslint ."
