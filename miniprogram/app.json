@@ -9,6 +9,7 @@
     "page/piglab/pages/face/face",
     "page/piglab/pages/chengyu/chengyu",
     "page/piglab/pages/chengyu/info",
+    "page/piglab/pages/object_detect/object_detect",
     "page/component/index",
     "page/component/pages/view/view",
     "page/component/pages/scroll-view/scroll-view",

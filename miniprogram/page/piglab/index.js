@@ -27,6 +27,10 @@ Page({
           {
             zh: '人脸识别',
             url: 'face/face'
+          },
+          {
+            zh: '目标检测',
+            url: 'object_detect/object_detect'
           }
         ]
       },
