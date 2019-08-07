@@ -29,7 +29,8 @@ Page({
           filePath: imageSrc,
           name: 'data',
           formData: {
-            'type': 'object_detect'
+            'type': 'object_detect',
+            'tag_img': '1'  //在图片上标记目标位置
           },
           success(res) {
             console.log('uploadImage success, res is:', res)
