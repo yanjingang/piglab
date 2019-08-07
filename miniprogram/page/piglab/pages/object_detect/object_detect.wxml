@@ -17,13 +17,15 @@
           </view>
           <view class="image-plus-text">拍照或选择图片</view>
         </block>
-
+      </view>
+      <view class="page-section-title">
+        <text>图像描述：{{res.caption.pos}}</text>
       </view>
     </view>
 
-    <view wx:for-items="{{res}}" wx:for-item="item" wx:key="index"  class="page-section">
+    <view wx:for-items="{{res.objects}}" wx:for-item="item" wx:key="index" class="page-section">
       <view class="page-section-title">
-        <text>识别结果：{{item.label}}\n</text>
+        <text>检测结果：{{item.label_name}} {{item.label}}\n</text>
         <text>概率：{{item.weight}}\n</text>
         <text>位置：{{item.rect}}\n</text>
       </view>
