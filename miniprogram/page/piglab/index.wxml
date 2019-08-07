@@ -2,7 +2,7 @@
 <view wx:else class="index">
   <view class="index-hd">
     <image class="index-logo" src="resources/kind/view.png"></image>
-    <view class="index-desc">小猪实验室项目演示客户端。</view>
+    <view class="index-desc">小猪实验室演示客户端。</view>
   </view>
   <view class="index-bd">
     <view class="kind-list">

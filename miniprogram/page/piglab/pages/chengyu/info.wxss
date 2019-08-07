@@ -1,0 +1,62 @@
+@import "../../../common/index.wxss";
+@import "../../../common/lib/weui.wxss";
+
+
+button{
+  margin-bottom: 30rpx;
+}
+button:last-child{
+  margin-bottom: 0;
+}
+.page-section-title{
+  padding: 0;
+}
+.swiper-item{
+  display: block;
+  height: 150px;
+}
+.page-section-title{
+  margin-top: 60rpx;
+  position: relative;
+}
+.info{
+  position: absolute;
+  right: 0;
+  color: #353535;
+  font-size: 30rpx;
+}
+.page-foot{
+  margin-top: 50rpx;
+}
+
+.cy-title{
+  background-color: #ffffff;
+}
+.cy-name{
+  color: #353535;
+  font-size: 80rpx;
+  margin-top: -70rpx;
+  margin-bottom: -20rpx;
+}
+.cy-py{
+  font-size: 30rpx;
+  margin-bottom: -50rpx;
+}
+
+.page-section{
+  margin-left: 30rpx;
+  margin-top: 40rpx;
+  margin-bottom: 0;
+  color: #656565
+}
+
+.cy-info{
+  background-color: #ffffff;
+}
+
+.border-bottom{
+  font-size: 40rpx;
+  margin-top: 30rpx;
+  margin-bottom: -30rpx;
+  margin-left: 30rpx;
+}

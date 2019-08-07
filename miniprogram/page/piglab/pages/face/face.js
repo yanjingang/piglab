@@ -3,6 +3,12 @@ const requestUrl = require('../../../../config').requestUrl
 
 var app = getApp();
 Page({
+  onShareAppMessage() {
+    return {
+      title: '人脸识别-小猪实验室',
+      path: 'page/piglab/pages/face/face'
+    }
+  },
   data: {
     camera_position: 'back',   //默认后置
     camera_position_name: '前置', //操作按钮
@@ -113,7 +119,7 @@ Page({
                 canvasId: 'canvas',
                 actions: ctx.getActions()
               })
-              return
+              return 
             }
             /*wx.showToast({
               title: '上传成功',
@@ -173,7 +179,7 @@ Page({
       actions: ctx.getActions()
     })
     that.ctx.takePhoto({
-      quality: 'heigh',
+      quality: 'low',
       success: (res) => {
         // console.log(res.tempImagePath),
         // 获取图片真实宽高
@@ -346,17 +352,13 @@ Page({
             icon: 'none',
             duration: 3000
           });
-        } else if (result['statusCode'] == 200 && result['data']['code'] == 0) { //执行Human走子
-          self.data = result['data']['data']
-          console.log('data: ', self.data)
-          if (self.data['end']) {
-            wx.showModal({
-              title: 'FACEID注册',
-              content: 'FACEID注册成功！',
-              showCancel: false,
-              confirmText: '确定'
-            });
-          }
+        } else if (result['statusCode'] == 200 && result['data']['code'] == 0) {
+          wx.showModal({
+            title: 'FACEID注册',
+            content: 'FACEID注册成功！',
+            showCancel: false,
+            confirmText: '确定'
+          });
         }
       },
       fail({

@@ -1,5 +1,11 @@
 const requestUrl = require('../../../../config').requestUrl
 Page({
+  onShareAppMessage() {
+    return {
+      title: '国际象棋AI-小猪实验室',
+      path: 'page/piglab/pages/chess/chess'
+    }
+  },
   data: { //会被api返回值覆盖，不要随便添加
     human_player_select: ['执白', '执黑'],
     human_player_id: 0,
@@ -421,7 +427,7 @@ Page({
             });
             return true;
           }
-          //远端human走子+ai走子
+          //远端ai走子
           self.aiMove();
         } 
       },
@@ -471,7 +477,7 @@ Page({
           //move
           self.movePiece(self.data['player'], self.data['move'], self.data['san']);
           self.setData({
-            msg: self.WINNER[self.data['player']] + '走子: ' + self.data['san']
+            msg: self.WINNER[self.data['player']] + '走子: ' + self.data['san'] + '  盘面打分: ' + self.data['score'] + '  AI推荐: ' + self.data['ponder']
           });
           //check end
           if (self.data['end']) {

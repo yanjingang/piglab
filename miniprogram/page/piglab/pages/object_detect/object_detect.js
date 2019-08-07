@@ -3,11 +3,15 @@ const uploadFileUrl = require('../../../../config').uploadFileUrl
 Page({
   onShareAppMessage() {
     return {
-      title: '手写数字识别-小猪实验室',
+      title: '对象检测-小猪实验室',
       path: 'page/piglab/pages/digit/digit'
     }
   },
-
+  data: {
+    url:'',
+    requrl:'',
+    res:{},
+  },
   chooseImage() {
     const self = this
 
@@ -25,7 +29,8 @@ Page({
           filePath: imageSrc,
           name: 'data',
           formData: {
-            'type': 'digit'
+            'type': 'object_detect',
+            'tag_img': '1'  //在图片上标记目标位置
           },
           success(res) {
             console.log('uploadImage success, res is:', res)
@@ -38,6 +43,7 @@ Page({
               return
             }
             res = JSON.parse(res.data)
+            console.log('res json, res is:', res)
             if (res.status != 0) {
               wx.showToast({
                 title: '上传失败' + res.status,
@@ -46,27 +52,12 @@ Page({
               })
               return
             }
-            const imageUrl = res.data['url']
-            const imageDigit = res.data['label']
-            const imageWeights = res.data['weight']
-            const imageWeight = imageWeights[imageDigit]
-            const imageIdx = res.data['idx']
-            const imageMids = res.data['mid_imgs']
-            console.log('uploadImage success, url:', res.data)
             wx.showToast({
               title: '上传成功',
               icon: 'success',
               duration: 1000
             })
-            self.setData({
-              imageSrc, 
-              imageUrl,
-              imageDigit,
-              imageWeight,
-              imageWeights,
-              imageIdx,
-              imageMids
-            })
+            self.setData(res.data)
           },
           fail({errMsg}) {
             console.log('uploadImage fail, errMsg is', errMsg)

@@ -27,6 +27,10 @@ Page({
           {
             zh: '人脸识别',
             url: 'face/face'
+          },
+          {
+            zh: '目标检测',
+            url: 'object_detect/object_detect'
           }
         ]
       },
@@ -48,18 +52,18 @@ Page({
           }*/
         ]
       }
-      /*,
+      ,
       {
         id: 'tools',
-        name: '小工具',
+        name: '工具',
         open: true,
         pages: [
           {
             zh: '成语接龙',
-            url: 'digit/digit'
+            url: 'chengyu/chengyu'
           }
         ]
-      }*/
+      }
     ],
     isSetTabBarPage: false,
   },

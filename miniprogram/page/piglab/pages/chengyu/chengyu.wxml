@@ -1,0 +1,22 @@
+<import src="../../../common/head.wxml" />
+<import src="../../../common/foot.wxml" />
+
+<view class="container">
+  <view class="page-body">
+    <view class="page-section">
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <input class="weui-input" auto-focus placeholder="输入拼音或汉字搜索" bindinput="onSearch"/>
+        </view>
+      </view>
+    </view>
+    <view class="page-section cy-list">
+      <view class="weui-cells weui-cells_after-title">
+        <view wx:for-items="{{items}}" wx:for-item="item" wx:key="index"  class="weui-cell weui-cell_switch">
+          <view class="weui-cell__bd"  data-id="{{item.id}}" data-name="{{item.name}}" data-py="{{item.py}}" data-info="{{item.info}}" bindtap="onInfo">{{item.name}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>
