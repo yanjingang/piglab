@@ -1,5 +1,8 @@
 <?php
-//上传文件
+/*
+ * 上传文件并执行后续操作
+ *
+ */
 //echo json_encode($_COOKIE);return;
 // https://www.yanjingang.com/piglab/api/upload.php
 $PATH = "/home/work/odp/webroot/yanjingang/www/piglab/";
@@ -11,6 +14,7 @@ $SUFFIXS = ['.png','.jpg','.jpeg'];
 $uploaded_file=$_FILES['data']['tmp_name'];  
 $real_name=$_FILES['data']['name']; 
 $type = $_REQUEST['type'];
+$tag_img = $_REQUEST['tag_img'];
 
 $result = array('status'=>0,'msg'=>'succ','data'=>array());
 if(!is_uploaded_file($uploaded_file)) {
@@ -49,6 +53,9 @@ if(!is_uploaded_file($uploaded_file)) {
 	    case 'face':
 		$url = "http://www.yanjingang.com:8025/piglab/face?img_file=" . $save_file;
                 $res_key = 'faces';
+		break;
+	    case 'object_detect':
+		$url = "http://www.yanjingang.com:8026/piglab/image/object_detect?img_file=" . $save_file . "&tag_img=". $tag_img;
 		break;
 	}
         if($url==''){
