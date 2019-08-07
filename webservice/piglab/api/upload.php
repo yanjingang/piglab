@@ -14,7 +14,7 @@ $SUFFIXS = ['.png','.jpg','.jpeg'];
 $uploaded_file=$_FILES['data']['tmp_name'];  
 $real_name=$_FILES['data']['name']; 
 $type = $_REQUEST['type'];
-$tag_img = isset($_REQUEST['tag_img'])?$_REQUEST['tag_img']:'0';
+$params = http_build_query($_REQUEST); //参数透传
 
 $result = array('status'=>0,'msg'=>'succ','data'=>array());
 if(!is_uploaded_file($uploaded_file)) {
@@ -42,20 +42,20 @@ if(!is_uploaded_file($uploaded_file)) {
         $res_key  = 'res';
 	switch($type){
 	    case 'digit':
-		$url = "http://www.yanjingang.com:8020/piglab/image/digit?img_file=" . $save_file;
+		$url = "http://www.yanjingang.com:8020/piglab/image/digit?img_file=" . $save_file . "&" . $params;
 		break;
 	    case 'dog_cat':
-		$url = "http://www.yanjingang.com:8021/piglab/image/dog_cat?img_file=" . $save_file;
+		$url = "http://www.yanjingang.com:8021/piglab/image/dog_cat?img_file=" . $save_file . "&" . $params;
 		break;
 	    case 'classification':
-		$url = "http://www.yanjingang.com:8022/piglab/image/classification?img_file=" . $save_file;
+		$url = "http://www.yanjingang.com:8022/piglab/image/classification?img_file=" . $save_file . "&" . $params;
 		break;
 	    case 'face':
-		$url = "http://www.yanjingang.com:8025/piglab/face?img_file=" . $save_file;
+		$url = "http://www.yanjingang.com:8025/piglab/face?img_file=" . $save_file . "&" . $params;
                 $res_key = 'faces';
 		break;
 	    case 'object_detect':
-		$url = "http://www.yanjingang.com:8026/piglab/image/object_detect?img_file=" . $save_file . "&tag_img=". $tag_img;
+		$url = "http://www.yanjingang.com:8026/piglab/image/object_detect?img_file=" . $save_file . "&" . $params;
 		break;
 	}
         if($url==''){
