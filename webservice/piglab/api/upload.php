@@ -14,7 +14,7 @@ $SUFFIXS = ['.png','.jpg','.jpeg'];
 $uploaded_file=$_FILES['data']['tmp_name'];  
 $real_name=$_FILES['data']['name']; 
 $type = $_REQUEST['type'];
-$tag_img = $_REQUEST['tag_img'];
+$tag_img = isset($_REQUEST['tag_img'])?$_REQUEST['tag_img']:'0';
 
 $result = array('status'=>0,'msg'=>'succ','data'=>array());
 if(!is_uploaded_file($uploaded_file)) {
