@@ -4,7 +4,7 @@ Page({
   onShareAppMessage() {
     return {
       title: '图片分类-小猪实验室',
-      path: 'page/piglab/pages/chess/chess'
+      path: 'page/piglab/pages/classification/classification'
     }
   },
   chooseImage() {

@@ -4,7 +4,7 @@ Page({
   onShareAppMessage() {
     return {
       title: '猫狗识别-小猪实验室',
-      path: 'page/piglab/pages/digit/digit'
+      path: 'page/piglab/pages/dog_cat/dog_cat'
     }
   },
   data: {

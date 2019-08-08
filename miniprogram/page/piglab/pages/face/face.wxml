@@ -3,10 +3,10 @@
     <camera device-position="front" flash="off" device-position="{{camera_position}}" binderror="error" style="width:100%;height:300px;"></camera>
     <canvas wx:if="{{canvasshow}}" style="width: 100%;height:300px;position:absolute;" canvas-id="canvas"></canvas>
     <view class="btn-area button-sp-area">
-      <button class="mini-btn" type="primary" size="mini" bindtap="onTrack" style='background-color:#00b26a;' data-trackshow="{{trackshow}}">{{trackshow}}</button>
-      <button class="mini-btn" type="primary" size="mini" bindtap="onDetect" style='background-color:#00b26a;'>识别</button>
       <button class="mini-btn" type="primary" size="mini" bindtap="onCameraPositionToggle" style='background-color:#00b26a;'>{{camera_position_name}}</button>
+      <button class="mini-btn" type="primary" size="mini" bindtap="onDetect" style='background-color:#00b26a;'>识别</button>
       <button class="mini-btn" type="primary" size="mini" bindgetuserinfo="onRegister"  open-type="getUserInfo"  style='background-color:#00b26a;'>注册</button>
+      <button class="mini-btn" type="primary" size="mini" bindtap="onTrack" style='background-color:#00b26a;' data-trackshow="{{trackshow}}">{{trackshow}}</button>
     </view>
     <!--view  class="preview-tips">识别结果:{{who}}</view-->
     <view wx:if="{{src}}" style='display:flex;width:100%'>
