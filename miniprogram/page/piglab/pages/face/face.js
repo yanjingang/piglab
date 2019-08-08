@@ -254,7 +254,7 @@ Page({
               var y = face['rect'][1] / takephoneheight * 300;
               var w = (face['rect'][2] - face['rect'][0]) / takephonewidth * that.data.windowWidth;
               var h = (face['rect'][3] - face['rect'][1]) / takephoneheight * 300;
-              var tag = face['faceid'] + " " + face['weight'].toFixed(2);
+              var tag = face['facename'] + " " + face['weight'].toFixed(2);
               ctx.setFontSize(14);
               ctx.fillText(tag, x + 2, y + 15);
               ctx.strokeRect(x, y, w, h);
