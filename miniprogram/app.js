@@ -6,6 +6,7 @@ App({
   },
   onShow(opts) {
     console.log('App Show', opts)
+    //隐藏tabBar
     wx.hideTabBar();
   },
   onHide() {

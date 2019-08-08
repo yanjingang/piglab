@@ -4,7 +4,7 @@ Page({
   onShareAppMessage() {
     return {
       title: '对象检测-小猪实验室',
-      path: 'page/piglab/pages/digit/digit'
+      path: 'page/piglab/pages/object_detect/object_detect'
     }
   },
   data: {
@@ -30,7 +30,8 @@ Page({
           name: 'data',
           formData: {
             'type': 'object_detect',
-            'tag_img': '1'  //在图片上标记目标位置
+            'tag_img': '1',  //在图片上标记目标位置
+            'tts_caption': 'pos',  //图像描述语音合成
           },
           success(res) {
             console.log('uploadImage success, res is:', res)
@@ -58,6 +59,11 @@ Page({
               duration: 1000
             })
             self.setData(res.data)
+            //播放tts合成声音
+            let manager = wx.getBackgroundAudioManager();
+            manager.title = res.data.res.caption.pos;
+            manager.singer = '图像描述';
+            manager.src = res.data.res.tts_caption;
           },
           fail({errMsg}) {
             console.log('uploadImage fail, errMsg is', errMsg)
