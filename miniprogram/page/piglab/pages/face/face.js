@@ -64,6 +64,7 @@ Page({
   takePhoto() {
     console.log("takePhoto")
     var that = this
+    clearInterval(that.interval); //本次拍照上传未得到返回前暂停定时任务
     var takephonewidth
     var takephoneheight
     that.ctx.takePhoto({
@@ -88,6 +89,10 @@ Page({
           },
           success(res) {
             console.log('uploadImage success, res is:', res)
+            if (that.data.canvasshow == true) {
+              console.log('start next takePhoto.');
+              that.interval = setInterval(that.takePhoto, 500)
+            }
             if (res.statusCode != 200) {
               wx.showToast({
                 title: '网络异常',
@@ -146,15 +151,13 @@ Page({
               canvasId: 'canvas',
               actions: ctx.getActions()
             });
-            //next take photo
-            clearInterval(that.interval);
+          },
+          fail({ errMsg }) {
+            console.log('uploadImage fail, errMsg is', errMsg)
             if (that.data.canvasshow == true) {
               console.log('start next takePhoto.');
               that.interval = setInterval(that.takePhoto, 500)
             }
-          },
-          fail({ errMsg }) {
-            console.log('uploadImage fail, errMsg is', errMsg)
           }
         })
 
