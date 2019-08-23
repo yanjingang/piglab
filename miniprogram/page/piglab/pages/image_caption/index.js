@@ -106,7 +106,7 @@ Page({
           formData: {
             'type': 'object_detect',
             'tag_img': '1',  //在图片上标记目标位置
-            'detect_face': '1',  //识别人脸
+            'detect_face': '0',  //识别人脸
             'tts_caption': 'pos',  //图像描述语音合成
           },
           success(res) {
@@ -134,11 +134,11 @@ Page({
             console.log('takePhoto success, res is:');
             console.log(res);
             if (res.status != 0) {
-              wx.showToast({
+              /*wx.showToast({
                 title: '上传失败' + res.status,
                 icon: 'none',
                 duration: 1000
-              });
+              });*/
               var ctx = wx.createContext();
               ctx.setStrokeStyle('#00c853');
               ctx.lineWidth = 1;

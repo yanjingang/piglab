@@ -15,20 +15,20 @@ Page({
           /*{
             zh: '手写数字识别',
             url: 'digit/digit'
-          },*/
+          },
           {
             zh: '猫狗识别',
             url: 'dog_cat/dog_cat'
           },
-          /*{
+          {
             zh: '图像分类',
             url: 'classification/classification'
-          },*/
+          },
           {
             zh: '人脸识别',
             url: 'face/face'
           },
-          /*{
+          {
             zh: '目标检测',
             url: 'object_detect/object_detect'
           },*/

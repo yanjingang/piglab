@@ -31,7 +31,7 @@ Page({
           formData: {
             'type': 'object_detect',
             'tag_img': '1',  //在图片上标记目标位置
-            'detect_face':'1',  //识别人脸
+            'detect_face':'0',  //识别人脸
             'tts_caption': 'pos',  //图像描述语音合成
           },
           success(res) {
