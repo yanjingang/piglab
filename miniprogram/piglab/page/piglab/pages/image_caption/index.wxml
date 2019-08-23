@@ -1,0 +1,23 @@
+<view class="page-body">
+  <view class="page-body-wrapper">
+    <camera device-position="{{camera_position}}" flash="off" frame-size="small" binderror="error" style="width:100%;height:300px;"></camera>
+    <canvas wx:if="{{canvasshow}}" style="width: 100%;height:300px;position:absolute;" canvas-id="canvas"></canvas>
+    <view class="btn-area button-sp-area">
+      <button class="mini-btn" type="primary" size="mini" bindtap="onTrack" style='background-color:#00b26a;' data-trackshow="{{trackshow}}">{{trackshow}}</button>
+      <button class="mini-btn" type="primary" size="mini" bindtap="onCameraPositionToggle" style='background-color:#00b26a;'>{{camera_position_name}}</button>
+      <button class="mini-btn" type="primary" size="mini" bindtap="onDetect" style='background-color:#00b26a;'>检测</button>
+    </view>
+    <view class="preview-tips"> {{res.caption.pos}}</view>
+    <view wx:if="{{src}}" style='display:flex;width:100%'>
+      <image  mode="aspectFit" src="{{src}}"  class='result-img'></image>
+      <canvas  style="width: 100%;height:300px;position:absolute;" canvas-id="canvasresult"></canvas>
+    </view>
+    <view wx:for-items="{{res.objects}}" wx:for-item="item" wx:key="index" class="page-section">
+      <view class="page-section-title">
+        <text>检测结果：{{item.label_name}} {{item.label}}\n</text>
+        <text>概率：{{item.weight}}\n</text>
+        <text>位置：{{item.rect}}\n</text>
+      </view>
+    </view>
+  </view>
+</view>
