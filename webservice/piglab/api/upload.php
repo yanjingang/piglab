@@ -5,7 +5,7 @@
  */
 //echo json_encode($_COOKIE);return;
 // https://www.yanjingang.com/piglab/api/upload.php
-$PATH = "/home/work/odp/webroot/yanjingang/www/piglab/";
+$PATH = "/home/work/service/odp/webroot/yanjingang/www/piglab/";
 $URL = "http://www.yanjingang.com/piglab/";
 $SUFFIXS = ['.png','.jpg','.jpeg'];
 
