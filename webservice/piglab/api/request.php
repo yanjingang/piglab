@@ -24,7 +24,7 @@ switch($req_type){
 		$url = "http://www.yanjingang.com:8025/piglab/face?".$params;
 		break;
 }
-//exit($url);
+#exit($url);
 
 if($url!=''){
 	$res = file_get_contents($url);
