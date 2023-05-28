@@ -18,7 +18,10 @@ switch($req_type){
 		$url = "http://www.yanjingang.com:8023/piglab/game/gomoku?".$params;
 		break;
     case 'chess':
-		$url = "http://www.yanjingang.com:8024/piglab/game/chess?".$params;
+		$url = "http://www.yanjingang.com:8024/piggy-chess/move?".$params;
+		break;
+	case 'chess-list':
+		$url = "http://www.yanjingang.com:8024/piggy-chess/list?".$params;
 		break;
     case 'face_register':
 		$url = "http://www.yanjingang.com:8025/piglab/face?".$params;
