@@ -23,6 +23,9 @@ switch($req_type){
 	case 'chess-list':
 		$url = "http://www.yanjingang.com:8024/piggy-chess/list?".$params;
 		break;
+	case 'chess-info':
+		$url = "http://www.yanjingang.com:8024/piggy-chess/info?".$params;
+		break;
     case 'face_register':
 		$url = "http://www.yanjingang.com:8025/piglab/face?".$params;
 		break;
