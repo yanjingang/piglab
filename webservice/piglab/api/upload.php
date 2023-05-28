@@ -58,7 +58,7 @@ if (!is_uploaded_file($uploaded_file)) {
 				$url = "http://www.yanjingang.com:8026/piglab/image/object_detect?img_file=" . $save_file . "&" . $params;
 				break;
 			case 'chess':
-				$url = "http://www.yanjingang.com:8024/piggy-chess/screen?img_file=" . str_replace($PATH, '', $save_file) . "&" . $params;
+				$url = "http://www.yanjingang.com:8024/piggy-chess/thumb?img_file=" . str_replace($PATH, '', $save_file) . "&" . $params;
 				break;
 		}
 		if ($url == '') {
